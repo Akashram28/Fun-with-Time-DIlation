@@ -6,8 +6,8 @@ getcontext().prec = 25
 def head_to_foot(height,time):
     vel_head = Decimal(2*math.pi/86400)*(Decimal(6371000) + height)
     vel_foot = Decimal(2*math.pi/86400)*Decimal(6371000)
-    dil_time_head = Decimal(time)/(Decimal(1- Decimal(vel_head**2/299792458**2))**Decimal(0.5))
-    dil_time_foot = Decimal(time)/(Decimal(1- Decimal(vel_foot**2/299792458**2))**Decimal(0.5))
+    dil_time_head = Decimal(time)/((Decimal(1- Decimal(vel_head**2/299792458**2))**Decimal(0.5)))
+    dil_time_foot = Decimal(time)/((Decimal(1- Decimal(vel_foot**2/299792458**2))**Decimal(0.5)))
     val = str(dil_time_head-dil_time_foot)
     if "E" in val:
         val = list(val.split("E"))
@@ -18,8 +18,8 @@ def head_to_foot(height,time):
 def diff_bet_two(height1,height2,time):
     vel_1 = Decimal(2*math.pi/86400)*(Decimal(6371000) + height1)
     vel_2 = Decimal(2*math.pi/86400)*(Decimal(6371000) + height2)
-    dil_time_1 = Decimal(time)/(Decimal(1- Decimal(vel_1**2/299792458**2))**Decimal(0.5))
-    dil_time_2 = Decimal(time)/(Decimal(1- Decimal(vel_2**2/299792458**2))**Decimal(0.5))
+    dil_time_1 = Decimal(time)/((Decimal(1- Decimal(vel_1**2/299792458**2))**Decimal(0.5)))
+    dil_time_2 = Decimal(time)/((Decimal(1- Decimal(vel_2**2/299792458**2))**Decimal(0.5)))
     val = str(abs(dil_time_1-dil_time_2))
     if "E" in val:
         val = list(val.split("E"))
