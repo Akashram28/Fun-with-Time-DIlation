@@ -1,2 +1,2 @@
 # Fun-with-Time-DIlation
-Calculate how much younger your head is compared to your feet.
+Calculate how young your head is compared to your feet.
